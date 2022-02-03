@@ -1,6 +1,5 @@
 package com.erikschouten.dubins.segments.components
 
-import com.erikschouten.dubins.equalFloat
 import kotlin.math.cos
 import kotlin.math.sin
 
@@ -19,21 +18,5 @@ class Pose(
         val dY = radius * sin(theta.value)
 
         return Circle(Point(x - dX, y + dY), radius) to Circle(Point(x + dX, y - dY), radius)
-    }
-
-    override fun equals(other: Any?): Boolean {
-        if (this === other) return true
-        if (other !is Pose) return false
-        if (!super.equals(other)) return false
-
-        if (!theta.value.equalFloat(other.theta.value)) return false
-
-        return true
-    }
-
-    override fun hashCode(): Int {
-        var result = super.hashCode()
-        result = 31 * result + theta.hashCode()
-        return result
     }
 }
