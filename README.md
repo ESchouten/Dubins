@@ -8,4 +8,4 @@ The Dubins path is commonly used in the fields of robotics and control theory as
 ### Wishlist / future
 #### Implement continuous curvature
 Car-like vehicles gradually increase and decrease their steering angle (sigma).
-Implementation should probably be based on a Euler spiral segment.
+Implementation should probably be based on an Euler spiral segment.
